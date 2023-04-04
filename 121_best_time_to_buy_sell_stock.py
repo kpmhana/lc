@@ -10,11 +10,11 @@ class Solution:
 
         while(i+1 < len(prices)):
 
-            if(prices[i] != 0  and prices[i] < min):
+            if(prices[i] < min):
                 min = prices[i]
-                max = prices[i]
+#                max = prices[i]
 
-            if(prices[i+1] > max):
+            if(prices[i+1]-min > profit):
                 max = prices[i+1]
                 profit = max - min
                 
@@ -24,8 +24,10 @@ class Solution:
 
 
 
-#p = [7,1,5,3,6,4,19,9]
-#p = [1,7,6,4,3,18]
-p = [3,2,6,5,0,3]
+p = [7,1,5,3,6,4,19,9] #18
+p = [1,7,6,4,3,18] #17
+p = [3,2,6,5,0,3] #4
+p = [2,1,2,1,0,1,2] #2
+
 s1 = Solution
 print(s1.maxProfit(s1,p))

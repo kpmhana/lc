@@ -21,13 +21,28 @@ class Solution:
             i = i + 1
 
         return profit
+    
+    def maxProfit2(self, prices) -> int:
+        print(prices)
+
+        profit = 0
+        min = prices[0]
+
+        for p in prices:
+            if(p < min):
+                min = p
+            profit = max(profit, p-min)
+
+        return profit
+    
+
 
 
 
 p = [7,1,5,3,6,4,19,9] #18
-p = [1,7,6,4,3,18] #17
-p = [3,2,6,5,0,3] #4
-p = [2,1,2,1,0,1,2] #2
+#p = [1,7,6,4,3,18] #17
+#p = [3,2,6,5,0,3] #4
+#p = [2,1,2,1,0,1,2] #2
 
 s1 = Solution
-print(s1.maxProfit(s1,p))
+print(s1.maxProfit2(s1,p))

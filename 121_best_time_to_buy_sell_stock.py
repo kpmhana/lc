@@ -10,7 +10,7 @@ class Solution:
 
         while(i+1 < len(prices)):
 
-            if(prices[i] < min):
+            if(prices[i] != 0  and prices[i] < min):
                 min = prices[i]
                 max = prices[i]
 
